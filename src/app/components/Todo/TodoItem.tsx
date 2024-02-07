@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
-import { deleteTodo, completeTodo } from "@/lib/features/todoSlice";
-import { useAppDispatch } from "@/lib/hooks";
+import { deleteTodo, completeTodo } from "@/lib/redux/features/todoSlice";
+import { useAppDispatch } from "@/lib/redux/hooks";
 
 const TodoItem = ({ id, title, completed }: Todo) => {
   const dispatch = useAppDispatch();

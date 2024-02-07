@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { addTodo } from "@/lib/features/todoSlice";
-import { useAppDispatch } from "@/lib/hooks";
+import { addTodo } from "@/lib/redux/features/todoSlice";
+import { useAppDispatch } from "@/lib/redux/hooks";
 
 const AddTodo = () => {
   const [title, setTitle] = useState("");
