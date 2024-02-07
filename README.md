@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contributing to Task (Todo) management app for Shab inc.
 
-## Getting Started
+The following is a set of guidelines for contributing to the Task App.
+These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Guideline
+
+### Structure of folders
+
+1.  The components folder includes reusable components which are used globally across the other components or pages locating in `src/app/components`
+
+2.  The lib folder includes the main configuration of using some services or 3rd party packages like redux locating in `src/lib`
+
+3.  The constant folder includes all the constant data which are used globally locating in `src/lib/constants`.
+
+4.  The redux folder located in `src/lib` contain features folder for maintaing the slices and also store for global store and a hook for accessing better to the built-in hooks of redux-toolkit
+
+5.  The pages and layouts are the same for standard Next.js app for creating the pages and layouts located in `src/app`.
+
+6.  eslint file expose the rules for linting the project also prettier file help to format code properly
+
+7.  tsconfig file include the configuration of TypeScript
+
+8.  next.config file include the configuration of next
+
+---
+
+# References
+
+we are using some frameworks and third parties in this app and we could refer to them by following links
+
+- Next.js official documentation [here](https://nextjs.org/)
+- ReactJS official documentation [here](https://reactjs.org/)
+- TypeScript official documentation [here](https://www.typescriptlang.org/)
+- ESlint Rules [here](https://eslint.org/docs/latest/rules)
+- State management [here](https://redux-toolkit.js.org/)
+- Javascript style guide from Airbnb [here](https://github.com/airbnb/javascript)
+- SASS guidelines [here](https://sass-guidelin.es/#architecture)
+
+---
+
+# Project setup
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Project run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Project build for production
 
-## Learn More
+```
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+# Project lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run lint
+```
